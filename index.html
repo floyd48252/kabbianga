@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabianga School - Discipline and Hard Work for Success</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kabianga: {
+                            navy: '#30243f',
+                            navyLight: '#f0eafa',
+                            purple: '#743da8',
+                            purpleDark: '#51217b',
+                            gold: '#c98d08',
+                            goldLight: '#f2c348',
+                            cream: '#f7faef'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7faef;
+            color: #30243f;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+        /* Glassmorphism elements */
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(116, 61, 168, 0.14);
+            box-shadow: 0 16px 40px rgba(48, 36, 63, 0.08);
+        }
+        
+        .glass-nav {
+            background: rgba(247, 250, 239, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(116, 61, 168, 0.16);
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #e9b52e 0%, #bd7900 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .purple-gradient-text {
+            background: linear-gradient(135deg, #a66be0 0%, #51217b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-pattern {
+            background-color: #f7faef;
+            background-image: radial-gradient(rgba(116, 61, 168, 0.12) 1.2px, transparent 1.2px), radial-gradient(rgba(222, 169, 39, 0.11) 1.2px, transparent 1.2px);
+            background-size: 44px 44px;
+            background-position: 0 0, 22px 22px;
+        }
+
+        [class~="bg-slate-950"] {
+            background-color: #f7faef !important;
+        }
+
+        [class~="bg-slate-950/95"] {
+            background-color: rgba(247, 250, 239, 0.97) !important;
+        }
+
+        [class~="bg-slate-950/60"] {
+            background-color: rgba(240, 234, 250, 0.86) !important;
+        }
+
+        [class~="bg-slate-900"] {
+            background-color: #f0eafa !important;
+        }
+
+        [class~="bg-slate-900/60"] {
+            background-color: rgba(240, 234, 250, 0.78) !important;
+        }
+
+        [class~="bg-slate-800"] {
+            background-color: #e7dcf3 !important;
+        }
+
+        [class~="bg-slate-700"] {
+            background-color: #d8c8eb !important;
+        }
+
+        [class~="text-white"] {
+            color: #30243f !important;
+        }
+
+        [class~="bg-emerald-600"][class~="text-white"],
+        [class~="bg-emerald-500"][class~="text-white"],
+        [class*="bg-emerald-"][class~="text-white"],
+        [class*="from-emerald-"][class~="text-white"],
+        [class~="bg-purple-600"][class~="text-white"],
+        [class~="bg-purple-500"][class~="text-white"],
+        [class~="bg-amber-600"][class~="text-white"] {
+            color: #fff !important;
+        }
+
+        main [class*="bg-slate-950/"] {
+            background-color: #f0eafa !important;
+        }
+
+        [class~="text-slate-200"],
+        [class~="text-slate-300"] {
+            color: #51435f !important;
+        }
+
+        [class~="text-slate-400"] {
+            color: #645675 !important;
+        }
+
+        [class~="text-slate-500"] {
+            color: #736583 !important;
+        }
+
+        [class~="text-emerald-300"],
+        [class~="text-emerald-400"] {
+            color: #7139a5 !important;
+        }
+
+        [class~="text-amber-400"],
+        [class~="text-amber-500"] {
+            color: #986500 !important;
+        }
+
+        [class~="border-slate-900"],
+        [class~="border-slate-800"] {
+            border-color: #e2d7ef !important;
+        }
+
+        [class~="border-slate-700"] {
+            border-color: #d1c0e5 !important;
+        }
+
+        .glass-nav .text-white,
+        .glass-nav .text-slate-300 {
+            color: #30243f !important;
+        }
+
+        .glass-card .text-amber-200,
+        .glass-card .text-rose-200 {
+            color: #704e0a !important;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f0eafa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c3a5df;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #743da8;
+        }
+
+        [class*="bg-emerald-"] {
+            background-color: #743da8 !important;
+        }
+
+        [class*="bg-emerald-500/10"] {
+            background-color: rgba(116, 61, 168, 0.1) !important;
+        }
+
+        [class*="bg-emerald-500/20"] {
+            background-color: rgba(116, 61, 168, 0.2) !important;
+        }
+
+        [class*="bg-emerald-950/30"] {
+            background-color: rgba(81, 33, 123, 0.12) !important;
+        }
+
+        [class*="hover:bg-emerald-"]:hover {
+            background-color: #51217b !important;
+        }
+
+        [class*="text-emerald-"] {
+            color: #7139a5 !important;
+        }
+
+        [class*="hover:text-emerald-"]:hover {
+            color: #51217b !important;
+        }
+
+        [class*="border-emerald-"] {
+            border-color: #b38ad8 !important;
+        }
+
+        [class*="hover:border-emerald-"]:hover {
+            border-color: #743da8 !important;
+        }
+
+        [class*="ring-emerald-"] {
+            --tw-ring-color: #743da8 !important;
+        }
+
+        [class*="from-emerald-"] {
+            --tw-gradient-from: #743da8 var(--tw-gradient-from-position) !important;
+            --tw-gradient-to: rgb(116 61 168 / 0) var(--tw-gradient-to-position) !important;
+        }
+
+        [class*="to-emerald-"] {
+            --tw-gradient-to: #51217b var(--tw-gradient-to-position) !important;
+        }
+
+        [class*="hover:from-emerald-"]:hover {
+            --tw-gradient-from: #743da8 var(--tw-gradient-from-position) !important;
+        }
+
+        [class*="hover:to-emerald-"]:hover {
+            --tw-gradient-to: #51217b var(--tw-gradient-to-position) !important;
+        }
+
+        [class*="selection:bg-emerald-"]::selection {
+            background-color: #743da8;
+        }
+
+        section[id] {
+            scroll-margin-top: 5.5rem;
+        }
+
+        #mobileMenu {
+            max-height: calc(100vh - 5rem);
+            max-height: calc(100dvh - 5rem);
+            overflow-y: auto;
+        }
+
+        @media (max-width: 374px) {
+            .brand-tagline {
+                display: none;
+            }
+        }
+
+        @media (max-width: 639px) {
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="number"],
+            select,
+            textarea {
+                font-size: 16px;
+            }
+        }
+        /* Custom Scrollbar */
+        
+         ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: #0F172A;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #743da8;
+        }
+        
+        .modal-active {
+            display: flex !important;
+            animation: fadeIn 0.2s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="site-theme.css">
+</head>
+
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
+
+    <div class="school-utility">
+        <div class="school-utility-inner">
+            <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Belgut, Kericho County, Kenya</span>
+            <div>
+                <a href="tel:+254711543687"><i class="fa-solid fa-phone" aria-hidden="true"></i> +254 711 543 687</a>
+                <a href="mailto:info@ks.sc.ke"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@ks.sc.ke</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- BRAND LOGO -->
+                <a href="index.html" class="flex min-w-0 items-center gap-3 group">
+                    <img src="https://ks.sc.ke/wp-content/uploads/2026/10/Untitled-design-1.png" alt="Kabianga School crest" class="w-11 h-11 shrink-0 rounded-xl bg-white p-1 object-contain shadow-lg shadow-emerald-950/50 ring-2 ring-emerald-600 ring-offset-2 ring-offset-[#f7faef] group-hover:scale-105 transition-transform">
+                    <div class="flex min-w-0 flex-col">
+                        <span class="flex min-w-0 items-center gap-2 font-extrabold text-lg sm:text-xl tracking-wide text-white font-heading">
+                            KABIANGA SCHOOL
+                            <span class="hidden md:inline-flex shrink-0 text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 uppercase tracking-widest font-mono">NATIONAL C1</span>
+                        </span>
+                        <span class="brand-tagline text-[11px] text-amber-500 font-semibold tracking-wider italic">"Discipline and Hard Work for Success"</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAV LINKS -->
+                <nav class="hidden xl:flex items-center gap-3 text-xs font-medium 2xl:gap-4 2xl:text-sm">
+                    <a href="index.html" class="text-emerald-400 hover:text-emerald-300 transition-colors">Home</a>
+                    <a href="history.html" class="text-slate-300 hover:text-emerald-400 transition-colors">History & Milestones</a>
+                    <a href="kcse-performance.html" class="text-slate-300 hover:text-emerald-400 transition-colors">KCSE Performance</a>
+                    <a href="cbc-pathways.html" class="text-slate-300 hover:text-emerald-400 transition-colors">CBC Senior Pathways</a>
+                    <a href="eligibility.html" class="text-slate-300 hover:text-emerald-400 transition-colors">Eligibility Tool</a>
+                    <a href="alumni.html" class="text-slate-300 hover:text-emerald-400 transition-colors">Alumni</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-emerald-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- HEADER ACTIONS -->
+                <div class="hidden xl:flex items-center gap-2 2xl:gap-3">
+                    <button onclick="openModal('downloadsModal')" class="px-4 py-2 text-xs font-bold uppercase tracking-wider text-slate-950 bg-amber-500 hover:bg-amber-400 rounded-lg shadow-lg shadow-amber-500/20 transition-all">
+                        Notice Board
+                    </button>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobileMenuBtn" type="button" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false" class="xl:hidden shrink-0 p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500">
+                    <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE NAV MENU -->
+        <div id="mobileMenu" class="hidden xl:hidden border-b border-slate-800 bg-slate-950/95 backdrop-blur-2xl">
+            <div class="px-4 pt-3 pb-6 space-y-2 text-sm">
+                <a href="index.html" class="mobile-link block px-3 py-2.5 rounded-lg text-emerald-400 font-semibold bg-slate-900/60">Home</a>
+                <a href="history.html" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900">History & Milestones</a>
+                <a href="kcse-performance.html" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900">KCSE Performance</a>
+                <a href="cbc-pathways.html" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900">CBC Pathways Explorer</a>
+                <a href="eligibility.html" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900">Eligibility Tool</a>
+                <a href="alumni.html" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900">Notable Alumni</a>
+                <a href="contact.html" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-900">Contact & Location</a>
+
+                <div class="pt-4 border-t border-slate-800 flex flex-col gap-2">
+                    <button onclick="openMobileModal('downloadsModal')" class="w-full py-3 text-xs font-bold uppercase tracking-wider text-slate-950 bg-amber-500 rounded-lg font-bold">
+                        Downloads & Notices
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 hero-pattern pt-20">
+
+        <!-- 1. HERO SECTION -->
+        <section id="home" class="school-hero relative px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto space-y-6">
+                <!-- HERO BADGE -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Kericho County • Belgut Constituency • KNEC: 28553202
+                </div>
+
+                <!-- HERO MAIN TITLE -->
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-tight font-heading">
+                    Shaping Leaders Through <br />
+                    <span class="purple-gradient-text">Discipline</span> & <span class="gold-gradient-text">Hard Work</span>
+                </h1>
+
+                <!-- HERO SUBTITLE -->
+                <p class="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
+                    Kabianga School is a premier public National Senior Boys Boarding institution in Kenya, delivering academic excellence, holistic character building, and innovative CBC pathways.
+                </p>
+
+                <!-- CTAS -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="kcse-performance.html" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold text-xs uppercase tracking-wider shadow-xl shadow-emerald-900/30 transition-all flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-graduation-cap text-amber-400"></i> Explore Academic Results
+                    </a>
+                    <a href="eligibility.html" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card text-white hover:bg-slate-800 font-bold text-xs uppercase tracking-wider transition-all border border-slate-700 flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-calculator text-emerald-400"></i> Check Admission Eligibility
+                    </a>
+                </div>
+                <div class="mx-auto mt-8 max-w-2xl rounded-2xl border border-emerald-500/20 bg-white/70 p-5 sm:p-6">
+                    <p class="text-base sm:text-lg font-bold text-white font-heading">Would you like to admit your child to Kabianga School?</p>
+                    <p class="mt-1 text-sm text-slate-400">See what families should prepare and how to confirm the current intake requirements.</p>
+                    <button type="button" onclick="openModal('admissionRequirementsModal')" class="mt-4 inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-emerald-900/20 transition-colors hover:bg-emerald-500">
+                        <i class="fa-solid fa-list-check" aria-hidden="true"></i> Check Our Requirements
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="school-intro px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+                <img src="https://ks.sc.ke/wp-content/uploads/2025/07/KABIANGA-2-1.jpg" alt="Kabianga School campus" loading="lazy" decoding="async" class="school-intro-image h-72 w-full rounded-2xl object-cover shadow-xl sm:h-96">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-emerald-400">A tradition of excellence</span>
+                    <h2 class="mt-3 text-3xl font-extrabold leading-tight text-white sm:text-4xl font-heading">Equipping learners to shape a better future</h2>
+                    <p class="mt-5 text-base leading-relaxed text-slate-400">Kabianga School equips students with the skills they need to transform themselves, others, and our globe. We combine academic ambition with discipline, character, and opportunities to grow beyond the classroom.</p>
+                    <div class="mt-7 flex flex-wrap gap-3">
+                        <a href="history.html" class="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-emerald-500">Discover our story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="contact.html" class="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-bold text-white transition-colors hover:border-emerald-500">Contact the school</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="school-profile px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-start">
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-emerald-400">Welcome to Kabianga</span>
+                    <h2 class="mt-2 text-3xl font-extrabold leading-tight text-white sm:text-4xl font-heading">A place to learn, grow and lead</h2>
+                    <p class="mt-5 text-sm leading-7 text-slate-400 sm:text-base">Kabianga School is a public national boys’ boarding school in Belgut, Kericho County. Its long history of education, its focus on discipline and hard work, and its commitment to preparing learners for the future are part of the Kabianga experience.</p>
+                    <p class="mt-4 text-sm leading-7 text-slate-400 sm:text-base">The school’s message is to equip students with the skills they need to transform themselves, others, and the world. Alongside classroom learning, students can take part in sports, journalism, music, and performing arts.</p>
+                    <blockquote class="mt-6 border-l-4 border-amber-500 pl-5 text-lg font-semibold italic leading-relaxed text-white">
+                        “Discipline and Hard Work for Success”
+                        <cite class="mt-2 block text-xs font-bold not-italic uppercase tracking-wider text-amber-400">Kabianga School motto</cite>
+                    </blockquote>
+                    <a href="history.html" class="mt-7 inline-flex items-center gap-2 font-bold text-emerald-400 hover:text-emerald-300">Read the school history <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="grid gap-3 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
+                    <article class="school-fact">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <div><h3>Our location</h3><p>Belgut, Kericho County, Kenya</p></div>
+                    </article>
+                    <article class="school-fact">
+                        <i class="fa-solid fa-school" aria-hidden="true"></i>
+                        <div><h3>School profile</h3><p>Public national boys’ senior boarding school</p></div>
+                    </article>
+                    <article class="school-fact">
+                        <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+                        <div><h3>KNEC code</h3><p>28553202</p></div>
+                    </article>
+                    <article class="school-fact">
+                        <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                        <div><h3>Senior school</h3><p>Explore academics and CBC pathways</p><a href="cbc-pathways.html">View pathways <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="school-links px-4 py-10 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-emerald-400">Explore Kabianga</span>
+                        <h2 class="mt-1 text-2xl font-bold text-white font-heading">School information</h2>
+                    </div>
+                    <a href="contact.html" class="text-sm font-semibold text-emerald-400 hover:text-emerald-300">Get in touch <i class="fa-solid fa-arrow-right ml-1" aria-hidden="true"></i></a>
+                </div>
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                    <a href="history.html"><i class="fa-solid fa-landmark" aria-hidden="true"></i><span><strong class="block text-sm">Our History</strong><span class="mt-1 block text-xs text-slate-400">Explore the school’s story</span></span></a>
+                    <a href="kcse-performance.html"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span><strong class="block text-sm">Academic Results</strong><span class="mt-1 block text-xs text-slate-400">See academic information</span></span></a>
+                    <a href="cbc-pathways.html"><i class="fa-solid fa-compass" aria-hidden="true"></i><span><strong class="block text-sm">CBC Pathways</strong><span class="mt-1 block text-xs text-slate-400">View senior school pathways</span></span></a>
+                    <a href="alumni.html"><i class="fa-solid fa-people-group" aria-hidden="true"></i><span><strong class="block text-sm">Notable Alumni</strong><span class="mt-1 block text-xs text-slate-400">Meet Kabianga graduates</span></span></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculum" class="school-content py-16">
+            <div class="mt-12 max-w-6xl mx-auto">
+                <div class="text-center mb-6">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading">Curriculum Overview</h2>
+                    <p class="text-slate-400 text-sm mt-2">A broad and balanced curriculum with stimulating learning across five subject areas.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <figure class="glass-card overflow-hidden rounded-2xl border border-slate-800">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1409-1536x869.jpg" alt="Languages learning at Kabianga School" loading="lazy" decoding="async" class="w-full h-48 object-cover">
+                        <figcaption class="p-5">
+                            <h3 class="text-base font-bold text-white">Languages</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed mt-2">Encompasses various aspects, including linguistics, language learning, communication, and cultural dimensions.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="glass-card overflow-hidden rounded-2xl border border-slate-800">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1417-1536x864.jpg" alt="Technical and applied learning at Kabianga School" loading="lazy" decoding="async" class="w-full h-48 object-cover">
+                        <figcaption class="p-5">
+                            <h3 class="text-base font-bold text-white">Technical &amp; Applied</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed mt-2">Academic disciplines and subjects of study that focus on practical skills, hands-on learning, and real-world applications.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="glass-card overflow-hidden rounded-2xl border border-slate-800">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1411-1536x877.jpg" alt="Humanities learning at Kabianga School" loading="lazy" decoding="async" class="w-full h-48 object-cover">
+                        <figcaption class="p-5">
+                            <h3 class="text-base font-bold text-white">Humanities</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed mt-2">Explore various aspects of human experience, including history, literature, philosophy, religion, and cultural studies.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="glass-card overflow-hidden rounded-2xl border border-slate-800">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1443-1536x1024.jpg" alt="Science learning at Kabianga School" loading="lazy" decoding="async" class="w-full h-48 object-cover">
+                        <figcaption class="p-5">
+                            <h3 class="text-base font-bold text-white">Science</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed mt-2">Seeks to understand the natural world through observation, experimentation, and evidence-based reasoning.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="glass-card overflow-hidden rounded-2xl border border-slate-800">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1435-1536x959.jpg" alt="Mathematics learning at Kabianga School" loading="lazy" decoding="async" class="w-full h-48 object-cover">
+                        <figcaption class="p-5">
+                            <h3 class="text-base font-bold text-white">Mathematics</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed mt-2">Encompasses a wide range of concepts and branches, including arithmetic, algebra, geometry, calculus, and more.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="mt-10">
+                    <div class="text-center max-w-3xl mx-auto mb-5">
+                        <h3 class="text-xl font-bold text-white font-heading">Kabianga School</h3>
+                        <p class="text-slate-400 text-sm mt-2">These photographs appear in the official homepage slideshow alongside the school's message: “We equip our students with skills they need to transform themselves, others, and our globe.”</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <figure class="overflow-hidden rounded-xl border border-slate-700/80">
+                            <img src="https://ks.sc.ke/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-21-at-22.21.24-1.jpeg" alt="Kabianga School homepage slideshow photograph" loading="lazy" decoding="async" class="w-full h-36 sm:h-40 object-cover">
+                            <figcaption class="px-3 py-2 text-xs text-slate-300">Official homepage slideshow</figcaption>
+                        </figure>
+                        <figure class="overflow-hidden rounded-xl border border-slate-700/80">
+                            <img src="https://ks.sc.ke/wp-content/uploads/2025/07/KABIANGA-2-1.jpg" alt="Kabianga School homepage slideshow photograph" loading="lazy" decoding="async" class="w-full h-36 sm:h-40 object-cover">
+                            <figcaption class="px-3 py-2 text-xs text-slate-300">Official homepage slideshow</figcaption>
+                        </figure>
+                        <figure class="overflow-hidden rounded-xl border border-slate-700/80">
+                            <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1458-scaled.jpg" alt="Kabianga School homepage slideshow photograph" loading="lazy" decoding="async" class="w-full h-36 sm:h-40 object-cover">
+                            <figcaption class="px-3 py-2 text-xs text-slate-300">Official homepage slideshow</figcaption>
+                        </figure>
+                        <figure class="overflow-hidden rounded-xl border border-slate-700/80">
+                            <img src="https://ks.sc.ke/wp-content/uploads/2025/07/KABIANGA-4-1.jpg" alt="Kabianga School homepage slideshow photograph" loading="lazy" decoding="async" class="w-full h-36 sm:h-40 object-cover">
+                            <figcaption class="px-3 py-2 text-xs text-slate-300">Official homepage slideshow</figcaption>
+                        </figure>
+                        <figure class="overflow-hidden rounded-xl border border-slate-700/80">
+                            <img src="https://ks.sc.ke/wp-content/uploads/2026/09/Dr.-Chelule-KS-1.png" alt="Kabianga School homepage slideshow photograph" loading="lazy" decoding="async" class="w-full h-36 sm:h-40 object-cover">
+                            <figcaption class="px-3 py-2 text-xs text-slate-300">Official homepage slideshow</figcaption>
+                        </figure>
+                        <figure class="overflow-hidden rounded-xl border border-slate-700/80">
+                            <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1513-scaled.jpg" alt="Kabianga School co-curricular activity photograph" loading="lazy" decoding="async" class="w-full h-36 sm:h-40 object-cover">
+                            <figcaption class="px-3 py-2 text-xs text-slate-300">Co-curricular life at Kabianga</figcaption>
+                        </figure>
+                        <figure class="overflow-hidden rounded-xl border border-slate-700/80">
+                            <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1520-2-e1708950469400.jpg" alt="Kabianga School student portrait featured with co-curricular information" loading="lazy" decoding="async" class="w-full h-36 sm:h-40 object-cover">
+                            <figcaption class="px-3 py-2 text-xs text-slate-300">Students and school life</figcaption>
+                        </figure>
+                        <figure class="overflow-hidden rounded-xl border border-slate-700/80">
+                            <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1443-1536x1024.jpg" alt="Science learning at Kabianga School" loading="lazy" decoding="async" class="w-full h-36 sm:h-40 object-cover">
+                            <figcaption class="px-3 py-2 text-xs text-slate-300">Science learning</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KEY STATS GRID -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+                <div class="glass-card p-6 rounded-2xl text-center border border-slate-800 hover:border-emerald-500/40 transition-all">
+                    <div class="text-3xl sm:text-4xl font-black text-white font-heading">1925</div>
+                    <div class="text-xs uppercase tracking-wider text-emerald-400 font-bold mt-1">Year Founded</div>
+                    <div class="text-[11px] text-slate-400 mt-1">100+ Years of Excellence</div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center border border-slate-800 hover:border-amber-500/40 transition-all">
+                    <div class="text-3xl sm:text-4xl font-black gold-gradient-text font-heading">9.647</div>
+                    <div class="text-xs uppercase tracking-wider text-amber-400 font-bold mt-1">Peak KCSE Mean (B+)</div>
+                    <div class="text-[11px] text-slate-400 mt-1">585/609 Direct University Entry</div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center border border-slate-800 hover:border-emerald-500/40 transition-all">
+                    <div class="text-3xl sm:text-4xl font-black emerald-gradient-text font-heading">&gt; 90%</div>
+                    <div class="text-xs uppercase tracking-wider text-emerald-400 font-bold mt-1">University Transition</div>
+                    <div class="text-[11px] text-slate-400 mt-1">Direct Public Uni Placement</div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center border border-slate-800 hover:border-amber-500/40 transition-all">
+                    <div class="text-3xl sm:text-4xl font-black text-white font-heading">2,500+</div>
+                    <div class="text-xs uppercase tracking-wider text-amber-400 font-bold mt-1">Enrolled Scholars</div>
+                    <div class="text-[11px] text-slate-400 mt-1">State-of-the-Art Boarding</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="school-learning px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl">
+                <div class="mx-auto mb-10 max-w-3xl text-center">
+                    <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-emerald-400">Learning and opportunity</span>
+                    <h2 class="mt-2 text-3xl font-extrabold text-white sm:text-4xl font-heading">An education that reaches beyond the classroom</h2>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-400">Explore the academic information, senior school pathways, and activities that help make up life at Kabianga.</p>
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                    <article class="school-learning-card">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1409-1536x869.jpg" alt="Language learning at Kabianga School" loading="lazy" decoding="async">
+                        <div><span>Academic learning</span><h3>Build knowledge and skills</h3><p>Learning at Kabianga spans languages, technical and applied subjects, humanities, science, and mathematics.</p><a href="kcse-performance.html">Academic information <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <article class="school-learning-card">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1417-1536x864.jpg" alt="Technical and applied learning at Kabianga School" loading="lazy" decoding="async">
+                        <div><span>Senior school</span><h3>Explore CBC pathways</h3><p>Find an overview of STEM, Social Sciences, and Arts &amp; Sports Science on the pathways page.</p><a href="cbc-pathways.html">Explore pathways <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                    <article class="school-learning-card">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1513-scaled.jpg" alt="Co-curricular life at Kabianga School" loading="lazy" decoding="async">
+                        <div><span>Student life</span><h3>Discover interests and talents</h3><p>Sports, journalism, music, and performing arts give students opportunities to participate beyond lessons.</p><a href="#life">Student activities <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. STUDENT LIFE & INFRASTRUCTURE -->
+        <section id="life" class="py-20 bg-slate-950/70 border-t border-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-400">Holistic Growth</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1 font-heading">Our Co-curricular Activities</h2>
+                    <p class="text-slate-400 text-sm mt-2">Students can take part in games, journalism, performing arts, and music.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+                    <figure class="glass-card overflow-hidden rounded-2xl border border-slate-800">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1513-scaled.jpg" alt="Kabianga School photograph featured with its co-curricular information" loading="lazy" decoding="async" class="w-full h-64 object-cover">
+                        <figcaption class="px-5 py-3 text-xs text-slate-300">Official photo featured in the co-curricular section</figcaption>
+                    </figure>
+                    <figure class="glass-card overflow-hidden rounded-2xl border border-slate-800">
+                        <img src="https://ks.sc.ke/wp-content/uploads/2024/02/DSC_1520-2-e1708950469400.jpg" alt="Kabianga School portrait featured with its co-curricular information" loading="lazy" decoding="async" class="w-full h-64 object-cover">
+                        <figcaption class="px-5 py-3 text-xs text-slate-300">School portrait featured alongside the co-curricular information</figcaption>
+                    </figure>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <article class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Games</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Our students are passionate about sports and athletics and can choose the activities they wish to take up.</p>
+                    </article>
+                    <article class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-newspaper"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Journalism</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Student writers are encouraged to create work for publication on the school blog.</p>
+                    </article>
+                    <article class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Performing Arts & Music</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Students can develop their talents through music, performance, and other creative activities.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 text-slate-400 text-xs py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="https://ks.sc.ke/wp-content/uploads/2026/10/Untitled-design-1.png" alt="Kabianga School crest" class="w-8 h-8 rounded-lg bg-white p-0.5 object-contain ring-2 ring-emerald-600 ring-offset-1 ring-offset-[#f7faef]">
+                    <span class="font-bold text-white text-base font-heading">KABIANGA SCHOOL</span>
+                </div>
+                <p class="leading-relaxed">National Public Boys' Senior Boarding School located in Belgut, Kericho County. KNEC Code: 28553202.</p>
+                <div class="text-amber-500 font-semibold italic">"Discipline and Hard Work for Success"</div>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white uppercase tracking-wider mb-4 text-xs">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-emerald-400 transition-colors">Home</a></li>
+                    <li><a href="history.html" class="hover:text-emerald-400 transition-colors">History & Milestones</a></li>
+                    <li><a href="kcse-performance.html" class="hover:text-emerald-400 transition-colors">KCSE Analysis</a></li>
+                    <li><a href="cbc-pathways.html" class="hover:text-emerald-400 transition-colors">CBC Senior Pathways</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white uppercase tracking-wider mb-4 text-xs">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" onclick="openModal('downloadsModal'); return false;" class="hover:text-emerald-400">Fees Structure Download</a></li>
+                    <li><a href="alumni.html" class="hover:text-emerald-400">Old Boys Network</a></li>
+                    <li><a href="contact.html" class="hover:text-emerald-400">Contact Administration</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white uppercase tracking-wider mb-4 text-xs">Official Newsletter</h4>
+                <p class="mb-3">Subscribe for official school announcements and circulars.</p>
+                <form onsubmit="handleSubscribe(event)" class="space-y-2">
+                    <input type="email" required placeholder="Parent / Guardian Email..." class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-emerald-500">
+                    <button type="submit" class="w-full py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold uppercase tracking-wider">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500">
+            <div>&copy; 2026 Kabianga School. All Rights Reserved.</div>
+            <div class="flex gap-4">
+                <a href="https://ks.sc.ke/" target="_blank" class="hover:underline text-emerald-400">Official Web: ks.sc.ke</a>
+                <a href="contact.html" class="hover:underline">Contact Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ADMISSION REQUIREMENTS -->
+    <div id="admissionRequirementsModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="admissionRequirementsTitle">
+        <div class="glass-card w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-emerald-500/30 p-6 sm:p-8 relative">
+            <button type="button" onclick="closeModal('admissionRequirementsModal')" aria-label="Close admission requirements" class="absolute top-3 right-3 flex h-10 w-10 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white text-lg sm:top-4 sm:right-4">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mb-5 pr-10">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-400">Admissions</span>
+                <h2 id="admissionRequirementsTitle" class="mt-1 text-2xl font-bold text-white font-heading">Preparing to join Kabianga School</h2>
+                <p class="mt-2 text-sm leading-relaxed text-slate-400">Admission and placement are subject to the Ministry of Education and the school's current intake instructions.</p>
+            </div>
+            <div class="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm leading-relaxed text-amber-200">
+                This is a general preparation checklist, not an official admission letter. Follow the latest joining instructions issued for your child's intake, as forms and requirements may change.
+            </div>
+            <h3 class="mt-6 text-sm font-bold uppercase tracking-wide text-white">What to prepare</h3>
+            <ul class="mt-3 space-y-3 text-sm text-slate-300">
+                <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-emerald-400" aria-hidden="true"></i><span>The official Ministry placement/admission letter for Kabianga School.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-emerald-400" aria-hidden="true"></i><span>Completed school joining and medical forms, as provided in the current joining instructions.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-emerald-400" aria-hidden="true"></i><span>The learner's birth certificate and academic records, if requested by the school.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-emerald-400" aria-hidden="true"></i><span>Parent or guardian contact details and any other documents specified in the admission letter.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-emerald-400" aria-hidden="true"></i><span>Uniform, personal items, and fee arrangements according to the current school instructions.</span></li>
+            </ul>
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+                <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-emerald-500">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i> Contact the School
+                </a>
+                <button type="button" onclick="openModal('admissionApplicationModal')" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 px-5 py-3 text-xs font-bold uppercase tracking-wide text-emerald-400 transition-colors hover:text-white">
+                    <i class="fa-solid fa-file-pen" aria-hidden="true"></i> Start Application
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMISSION APPLICATION -->
+    <div id="admissionApplicationModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="admissionApplicationTitle">
+        <div class="glass-card w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-emerald-500/30 p-6 sm:p-8 relative">
+            <button type="button" onclick="closeModal('admissionApplicationModal')" aria-label="Close application form" class="absolute top-3 right-3 flex h-10 w-10 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white text-lg sm:top-4 sm:right-4">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mb-5 pr-10">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-400">Admissions</span>
+                <h2 id="admissionApplicationTitle" class="mt-1 text-2xl font-bold text-white font-heading">Admission application details</h2>
+                <p class="mt-2 text-sm leading-relaxed text-slate-400">Fill in the learner and parent/guardian details, then email the application directly to the school.</p>
+            </div>
+            <div class="mb-5 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm leading-relaxed text-amber-200">
+                Submitting opens a prefilled Gmail email to admin@ks.sc.ke in your browser. Sign in if asked, review the details, and press Send. The website cannot send it automatically. Avoid including sensitive documents in ordinary email and confirm current requirements with the school.
+            </div>
+            <form onsubmit="handleAdmissionApplication(event)" class="space-y-5">
+                <fieldset class="space-y-4">
+                    <legend class="text-sm font-bold uppercase tracking-wide text-white">Learner details</legend>
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div>
+                            <label for="applicantName" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Learner's full name</label>
+                            <input id="applicantName" name="applicantName" type="text" autocomplete="name" maxlength="120" required class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="applicantBirthDate" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Date of birth</label>
+                            <input id="applicantBirthDate" name="applicantBirthDate" type="date" required class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="applicantPreviousSchool" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Current/previous school</label>
+                            <input id="applicantPreviousSchool" name="applicantPreviousSchool" type="text" maxlength="150" required class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="applicantClass" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Class applying for</label>
+                            <input id="applicantClass" name="applicantClass" type="text" maxlength="80" placeholder="e.g. Form 1 / Grade 10" required class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="applicantIntake" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Intake year</label>
+                            <input id="applicantIntake" name="applicantIntake" type="number" min="2026" max="2100" required class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="applicantPlacementRef" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Placement/reference number (if available)</label>
+                            <input id="applicantPlacementRef" name="applicantPlacementRef" type="text" maxlength="80" class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="space-y-4">
+                    <legend class="text-sm font-bold uppercase tracking-wide text-white">Parent or guardian</legend>
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div>
+                            <label for="guardianName" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Full name</label>
+                            <input id="guardianName" name="guardianName" type="text" autocomplete="name" maxlength="120" required class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="guardianRelationship" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Relationship to learner</label>
+                            <input id="guardianRelationship" name="guardianRelationship" type="text" maxlength="60" required class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="guardianPhone" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Phone number</label>
+                            <input id="guardianPhone" name="guardianPhone" type="tel" autocomplete="tel" maxlength="30" required class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="guardianEmail" class="mb-1 block text-xs font-semibold uppercase text-slate-300">Email address</label>
+                            <input id="guardianEmail" name="guardianEmail" type="email" autocomplete="email" maxlength="254" required class="w-full rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-2.5 text-base text-white focus:border-emerald-500 focus:outline-none">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                    <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-emerald-500">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email Application to School
+                    </button>
+                    <button type="button" onclick="closeModal('admissionApplicationModal')" class="rounded-xl border border-slate-700 px-5 py-3 text-xs font-bold uppercase tracking-wide text-slate-300 transition-colors hover:text-white">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 2: NOTICE BOARD & DOWNLOADS -->
+    <div id="downloadsModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="glass-card w-full max-w-2xl rounded-2xl p-6 sm:p-8 border border-amber-500/30 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('downloadsModal')" aria-label="Close notices" class="absolute top-3 right-3 flex h-10 w-10 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white text-lg sm:top-4 sm:right-4">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-lg font-heading">Official Notices & Downloads</h3>
+                    <p class="text-xs text-slate-400">Access official circulars, fee structures, and application forms.</p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
+                    <div>
+                        <div class="font-bold text-white text-sm">2026 Senior School Fee Structure & Guidelines</div>
+                        <div class="text-xs text-slate-400">Ministry of Education Approved Fees Breakdown (.PDF)</div>
+                    </div>
+                    <button onclick="showToast('Downloading Fee Structure PDF...')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shrink-0">
+                        <i class="fa-solid fa-download mr-1"></i> Download
+                    </button>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
+                    <div>
+                        <div class="font-bold text-white text-sm">Form 1 Joining Instructions & Medical Form</div>
+                        <div class="text-xs text-slate-400">Official Admission Packet for New Scholars (.PDF)</div>
+                    </div>
+                    <button onclick="showToast('Downloading Admission Packet...')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shrink-0">
+                        <i class="fa-solid fa-download mr-1"></i> Download
+                    </button>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
+                    <div>
+                        <div class="font-bold text-white text-sm">KCSE 2024 / 2025 Comprehensive Analysis Report</div>
+                        <div class="text-xs text-slate-400">Subject Breakdown & Performance Metrics (.PDF)</div>
+                    </div>
+                    <button onclick="showToast('Downloading Performance Report...')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shrink-0">
+                        <i class="fa-solid fa-download mr-1"></i> Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 glass-card px-4 py-3 rounded-xl border border-emerald-500/40 text-emerald-400 text-xs font-bold flex items-center gap-2 shadow-2xl">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg">Action executed successfully.</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('nav a, #mobileMenu .mobile-link').forEach(link => {
+            const isActive = link.getAttribute('href') === currentPage;
+            link.classList.toggle('text-emerald-400', isActive);
+            link.classList.toggle('text-slate-300', !isActive);
+            if (link.closest('#mobileMenu')) {
+                link.classList.toggle('font-semibold', isActive);
+                link.classList.toggle('bg-slate-900/60', isActive);
+            }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const menuIsOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', String(menuIsOpen));
+            mobileMenuBtn.setAttribute('aria-label', menuIsOpen ? 'Close navigation menu' : 'Open navigation menu');
+            menuIcon.classList.toggle('fa-bars', !menuIsOpen);
+            menuIcon.classList.toggle('fa-xmark', menuIsOpen);
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.setAttribute('aria-label', 'Open navigation menu');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1280 && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.setAttribute('aria-label', 'Open navigation menu');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        function openModal(id) {
+            document.getElementById(id).classList.add('modal-active');
+        }
+
+        function openMobileModal(id) {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.setAttribute('aria-label', 'Open navigation menu');
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+            openModal(id);
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('modal-active');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        function handleSubscribe(e) {
+            e.preventDefault();
+            showToast('Subscribed to Kabianga School announcements.');
+            e.target.reset();
+        }
+
+        function handleAdmissionApplication(e) {
+            e.preventDefault();
+            const formData = new FormData(e.currentTarget);
+            const fields = [
+                ["Learner's full name", 'applicantName'],
+                ['Date of birth', 'applicantBirthDate'],
+                ['Current/previous school', 'applicantPreviousSchool'],
+                ['Class applying for', 'applicantClass'],
+                ['Intake year', 'applicantIntake'],
+                ['Placement/reference number', 'applicantPlacementRef'],
+                ['Parent/guardian full name', 'guardianName'],
+                ['Relationship to learner', 'guardianRelationship'],
+                ['Parent/guardian phone', 'guardianPhone'],
+                ['Parent/guardian email', 'guardianEmail']
+            ];
+            const applicationText = [
+                'KABIANGA SCHOOL - ADMISSION APPLICATION',
+                '',
+                ...fields.map(([label, name]) => `${label}: ${formData.get(name) || 'Not provided'}`)
+            ].join('\r\n');
+            const subject = `Admission application - ${formData.get('applicantName')}`;
+            const composeUrl = new URL('https://mail.google.com/mail/');
+            composeUrl.searchParams.set('view', 'cm');
+            composeUrl.searchParams.set('fs', '1');
+            composeUrl.searchParams.set('to', 'admin@ks.sc.ke');
+            composeUrl.searchParams.set('su', subject);
+            composeUrl.searchParams.set('body', applicationText);
+            window.location.href = composeUrl.toString();
+        }
+    </script>
+    <script src="site-background.js" defer></script>
+</body>
+
+</html>
